@@ -24,3 +24,5 @@ We **are enjoying** knowing more about and communicating Jeffreys Prior. You are
 Here's a comic in recognition of Mathematical Statistics (especially null hypothesis).
 
 ![](StartComic.png)
+
+Credit to https://xkcd.com/892/
