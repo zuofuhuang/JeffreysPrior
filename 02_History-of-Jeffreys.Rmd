@@ -1,0 +1,16 @@
+# History of Jeffreys
+
+
+## Section 1
+
+```{r}
+hist(rnorm(10))
+```
+
+## Section 2
+
+## Section 3
+
+```{r}
+hist(rnorm(100))
+```

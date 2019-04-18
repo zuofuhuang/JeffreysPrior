@@ -1,0 +1,12 @@
+# Introduction
+
+```{r}
+hist(rnorm(1000))
+```
+
+
+## Section 1
+
+## Section 2
+
+## Section 3
