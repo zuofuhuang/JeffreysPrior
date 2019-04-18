@@ -1,6 +1,6 @@
 ---
-title: 'Jeffreys Prior'
-author: 'Zuofu'
+title: 'MATH 455 Mathematical Statistics - Jeffreys Prior'
+author: 'Emma Heth and Zuofu Huang, Spring 2019 Macalester College'
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
@@ -15,4 +15,12 @@ github-repo: zuofuhuang/JeffreysPrior
   
 # Preface
 
-test hello
+Hello! Welcome to the bookdown of our MATH 455 Mathematical Statistics project! Hope this is a good abstract of Jeffreys Prior for you.
+
+We **are enjoying** knowing more about and communicating Jeffreys Prior. You are always welcome to come back to check our progress!
+
+&nbsp;
+
+Here's a comic in recognition of Mathematical Statistics (especially null hypothesis).
+
+![](StartComic.png)
