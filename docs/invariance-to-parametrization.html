@@ -48,6 +48,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 </head>
 
@@ -76,7 +113,9 @@
 <li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
 <li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
 <li class="chapter" data-level="4.3" data-path="following-up-on-bernoulli.html"><a href="following-up-on-bernoulli.html"><i class="fa fa-check"></i><b>4.3</b> Following up on Bernoulli</a></li>
-<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a></li>
+<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="normal.html"><a href="normal.html#a-little-change"><i class="fa fa-check"></i><b>4.4.1</b> A little change</a></li>
+</ul></li>
 <li class="chapter" data-level="4.5" data-path="limitations.html"><a href="limitations.html"><i class="fa fa-check"></i><b>4.5</b> Limitations</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
@@ -99,6 +138,29 @@
             <section class="normal" id="section-">
 <div id="invariance-to-parametrization" class="section level2">
 <h2><span class="header-section-number">4.2</span> Invariance to parametrization</h2>
+<p>To show that Jeffreys prior is preferred over a commonly mistaken “noninformative” prior such as <span class="math inline">\(Beta(1,1)\)</span>, we show that Jeffreys prior is invariant to reparametrization. This process includes proof of the Invariance Principle by Jeffreys (1946) and Jordan (2010).</p>
+<p>Suppose <span class="math inline">\(\pi(\theta)\)</span> is a Jeffreys prior on <span class="math inline">\(\theta\)</span>, and we define a new parameter <span class="math inline">\(\phi = h(\theta)\)</span> as a function of <span class="math inline">\(\theta\)</span>. The question is whether <span class="math inline">\(\pi_J(\theta)\)</span> after a change of variable is the same as <span class="math inline">\(\pi_J(\phi)\)</span>. To prove that, we first calculate Fisher Information of <span class="math inline">\(\phi\)</span>:</p>
+<p><span class="math display">\[\begin{align} I(\phi) &amp; = -E\left[\frac{d^2 logf(X|\phi)}{d\phi^2}\right] \\ &amp; = 
+-E\left[\frac{d}{d\phi}\frac{dlogf(X|\phi)}{d\phi}\right] \\ &amp; = 
+-E\left[\frac{d}{d\phi}\frac{dlogf(X|\phi(\theta))}{d\phi}\right] \\ &amp; =
+-E\left[\frac{d}{d\phi}\left(\frac{dlogf(X|\phi(\theta))}{d\theta}·\frac{d\theta}{d\phi}\right)\right] \end{align}\]</span></p>
+<p>Let’s stop here for a second. Here’s where the <strong>Chain Rule</strong> works its magic.</p>
+<p><span class="math display">\[(A·B)&#39; = A&#39;·B + A·B&#39;\]</span></p>
+<p> </p>
+<p> </p>
+<p>If we think of <span class="math inline">\(\frac{dlogf(X|\phi(\theta))}{d\theta}\)</span> as part <span class="math inline">\(A\)</span> of the chain rule formula, and <span class="math inline">\(\frac{d\theta}{d\phi}\)</span> as part B, we have something we can work with:</p>
+<p><span class="math display">\[\begin{align}
+- E\left[\frac{dA}{d\phi}·B+\frac{dB}{d\phi}·A\right] &amp; = 
+-E\left[\frac{d^2 log f(X|\phi(\theta))}{d\theta d\phi}·\frac{d\theta}{d\phi} + \frac{d^2\theta}{d\phi^2}·\frac{dlogf(X|\theta)}{d\theta}\right] \\ &amp; = 
+-E\left[\frac{d^2 logf(X|\theta)}{d\theta d\theta}·\frac{d\theta}{d\phi}·\frac{d\theta}{d\phi} + \frac{d log f(X|\theta)}{d\theta}\frac{d^2\theta}{d\phi^2}\right] \\ &amp; = 
+-E\left[\frac{d^2 logf(X|\theta)}{d\theta^2}·\left(\frac{d\theta}{d\phi}\right)^2 + \frac{d log f(X|\theta)}{d\theta}\frac{d^2\theta}{d\phi^2}\right] \;\;\;\;\;\;\;\;\;\;\;\;\;\;\; (2) \end{align} \]</span></p>
+<p>From Section 2 Equation (1), we know that</p>
+<p><span class="math display">\[E\left[\frac{d log f(X|\theta)}{d\theta}\right] = 0\]</span></p>
+<p>Substituting this result into Equation (2), we observe that</p>
+<p><span class="math display">\[I(\phi) = I(\theta)\left(\frac{d\theta}{d\phi}\right)^2 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\; (3)\]</span></p>
+<p>Take the square root of that, we get</p>
+<p><span class="math display">\[\sqrt{I(\phi)} = \sqrt{I(\theta)} \left|{\frac{d\theta}{d\phi}}\right| \;\; \text{OR} \;\; \pi_J(\phi) = \pi_J(\theta) \left|{\frac{d\theta}{d\phi}}\right| \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;   (4)\]</span></p>
+<p><span class="math inline">\(Q.E.D.\)</span></p>
 </div>
             </section>
 

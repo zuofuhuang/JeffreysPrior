@@ -48,6 +48,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 </head>
 
@@ -76,7 +113,9 @@
 <li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
 <li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
 <li class="chapter" data-level="4.3" data-path="following-up-on-bernoulli.html"><a href="following-up-on-bernoulli.html"><i class="fa fa-check"></i><b>4.3</b> Following up on Bernoulli</a></li>
-<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a></li>
+<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="normal.html"><a href="normal.html#a-little-change"><i class="fa fa-check"></i><b>4.4.1</b> A little change</a></li>
+</ul></li>
 <li class="chapter" data-level="4.5" data-path="limitations.html"><a href="limitations.html"><i class="fa fa-check"></i><b>4.5</b> Limitations</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
@@ -99,6 +138,24 @@
             <section class="normal" id="section-">
 <div id="following-up-on-bernoulli" class="section level2">
 <h2><span class="header-section-number">4.3</span> Following up on Bernoulli</h2>
+<p>Suppose X is binomially distributed:</p>
+<p><span class="math display">\[X\sim Bin(n,\theta) \\ f(x|\theta) = {n\choose x} \theta^x (1-\theta)^{n-x}\]</span></p>
+<p>From the warmup, given that E(X)=p, we know that</p>
+<p><span class="math display">\[I(\theta) = -E_{\theta} \left[ \frac{d^2 log f(x|\theta)}{d\theta^2}\right] \\ =\frac{1}{\theta (1-\theta)}\]</span></p>
+<p>Then <span class="math inline">\(\pi_J(\theta) = I(\theta)^{\frac{1}{2}} \propto \theta^{\frac{1}{2}}(1-\theta)^{\frac{1}{2}}\)</span>, so the Jeffreys prior has the distribution of a Beta<span class="math inline">\(\left(\frac{1}{2},\frac{1}{2}\right)\)</span> density. Below, we can see the distributions of a Beta(½, ½) and a Beta(1, 1), or flat prior.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">library</span>(reshape2)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dt">length=</span><span class="dv">200</span>)
+beta_dist &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">cbind</span>(x, <span class="kw">dbeta</span>(x,<span class="dv">1</span>,<span class="dv">1</span>), <span class="kw">dbeta</span>(x,<span class="fl">0.5</span>,<span class="fl">0.5</span>)))
+
+<span class="kw">colnames</span>(beta_dist) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;x&quot;</span>,<span class="st">&quot;a=1 b=1&quot;</span>,<span class="st">&quot;a=0.5 b=0.5&quot;</span>)
+
+beta_dist &lt;-<span class="st"> </span><span class="kw">melt</span>(beta_dist,x)
+
+g &lt;-<span class="st"> </span><span class="kw">ggplot</span>(beta_dist, <span class="kw">aes</span>(x,value, <span class="dt">color=</span>variable))
+g<span class="op">+</span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Beta Distribution&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Probability&quot;</span>, <span class="dt">y=</span><span class="st">&quot;density&quot;</span>)</code></pre></div>
+<p><img src="JeffreysPrior_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Here, we see that the Jeffreys prior compensates for the likelihood by weighting the extremes. Under the likelihood, data around <span class="math inline">\(p=0.5\)</span> has the least effect on the posterior, while data that shows a true <span class="math inline">\(p=0\)</span> or <span class="math inline">\(p=1\)</span> will have the greatest effect on the posterior. The Jeffreys prior is noninformative because it weights the opposite of the likelihood function while a flat prior would not. In this case, the Jeffreys prior happens to be a conjugate prior, though this is not always true.</p>
 </div>
             </section>
 

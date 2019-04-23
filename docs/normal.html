@@ -48,6 +48,43 @@
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 </head>
 
@@ -76,7 +113,9 @@
 <li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
 <li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
 <li class="chapter" data-level="4.3" data-path="following-up-on-bernoulli.html"><a href="following-up-on-bernoulli.html"><i class="fa fa-check"></i><b>4.3</b> Following up on Bernoulli</a></li>
-<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a></li>
+<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="normal.html"><a href="normal.html#a-little-change"><i class="fa fa-check"></i><b>4.4.1</b> A little change</a></li>
+</ul></li>
 <li class="chapter" data-level="4.5" data-path="limitations.html"><a href="limitations.html"><i class="fa fa-check"></i><b>4.5</b> Limitations</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
@@ -99,11 +138,31 @@
             <section class="normal" id="section-">
 <div id="normal" class="section level2">
 <h2><span class="header-section-number">4.4</span> Normal!</h2>
-<p>For a univariate Normal distribution <span class="math inline">\(X \sim N(\theta,\sigma^2)\)</span>, <span class="math display">\[\begin{align} f_X(x) &amp; = \frac{1}{\sqrt{2\pi I}}·e^{-\frac{(x-\theta)^2}{2I}}
-\\ Log f(X;\theta) &amp; = -\frac{1}{2} Log(2\pi \sigma^2) - \frac{(x-\theta)^2}{2\sigma^2} \\
-\frac{\partial}{\partial \theta} Log f(X;\theta) &amp; = [-\frac{x^2-2x\theta + \theta^2}{2\sigma^2}]’ = \frac{x}{\sigma^2} - \frac{\theta}{\sigma^2} \\ 
-\frac{\partial^2}{\partial \theta^2} Log f(X;\theta) &amp; = -\frac{1}{\sigma^2} \\
-I(\theta) &amp; = -E(-\frac{1}{\sigma^2}) = \frac{1}{\sigma^2} \rightarrow \pi_J = (\sigma^2)^{-\frac{1}{2}} = \frac{1}{\sigma} \end{align}\]</span></p>
+<p>For a univariate Normal distribution <span class="math inline">\(X \sim N(\theta,\sigma^2)\)</span>,</p>
+<p><span class="math display">\[\begin{align} f_X(x) &amp; = \frac{1}{\sqrt{2\pi \sigma^2}}·e^{-\frac{(x-\theta)^2}{2\sigma^2}}
+\\ Log f(X;\theta) &amp; = -\frac{1}{2} Log(2\pi \sigma^2) - \frac{(x-\theta)^2}{2\sigma^2}\end{align}\]</span></p>
+<p>Then, we take the first and second derivative:</p>
+<p><span class="math display">\[\begin{align} \frac{\partial}{\partial \theta} Log f(X;\theta) &amp; = [-\frac{x^2-2x\theta + \theta^2}{2\sigma^2}]’ = \frac{x}{\sigma^2} - \frac{\theta}{\sigma^2} \\ 
+\frac{\partial^2}{\partial \theta^2} Log f(X;\theta) &amp; = -\frac{1}{\sigma^2} \end{align}\]</span></p>
+<p>From there, it’s just smooth sailing:</p>
+<p><span class="math display">\[I(\theta) =-E(-\frac{1}{\sigma^2}) = \frac{1}{\sigma^2}\]</span></p>
+<p> </p>
+<p> </p>
+<p>Take a quick second (or more like 15 seconds) and calculate what the <strong>Jeffreys Prior</strong> is here.</p>
+<p> </p>
+<p><span class="math display">\[I(\theta) =-E(-\frac{1}{\sigma^2}) = \frac{1}{\sigma^2} \;\;\; \rightarrow \;\;\; \pi_J \propto (\sigma^2)^{-\frac{1}{2}} = \frac{1}{\sigma}\]</span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<div id="a-little-change" class="section level3">
+<h3><span class="header-section-number">4.4.1</span> A little change</h3>
+<p>What if we have multiple (say, <span class="math inline">\(n\)</span>) observations? How would the Jeffreys Prior change?</p>
+<p> </p>
+<p><strong>Recall:</strong> <span class="math inline">\(I_n(\theta) = n·I_1(\theta)\)</span></p>
+<p><span class="math display">\[I_n(\theta) =-E(-\frac{n}{\sigma^2}) = \frac{n}{\sigma^2} \;\;\; \rightarrow \;\;\; \pi_J \propto \left(\frac{n}{\sigma^2}\right)^{1/2} = \frac{\sqrt{n}}{\sigma}\]</span></p>
+</div>
 </div>
             </section>
 
