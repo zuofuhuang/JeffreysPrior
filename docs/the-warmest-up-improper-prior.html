@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.1 Jeffreys Prior | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
-  <meta name="description" content="4.1 Jeffreys Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <title>3.4 The warmest-up: Improper Prior | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
+  <meta name="description" content="3.4 The warmest-up: Improper Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.1 Jeffreys Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta property="og:title" content="3.4 The warmest-up: Improper Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="zuofuhuang/JeffreysPrior" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.1 Jeffreys Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta name="twitter:title" content="3.4 The warmest-up: Improper Prior | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="findings.html">
-<link rel="next" href="invariance-to-parametrization.html">
+<link rel="prev" href="warmer-up-itheta.html">
+<link rel="next" href="findings-jeffreys-prior.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,16 +66,20 @@
 <li class="chapter" data-level="2.1" data-path="wait-jeffreys.html"><a href="wait-jeffreys.html"><i class="fa fa-check"></i><b>2.1</b> Wait, Jeffreys?</a></li>
 <li class="chapter" data-level="2.2" data-path="what-do-we-do.html"><a href="what-do-we-do.html"><i class="fa fa-check"></i><b>2.2</b> What do we do?</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="warmup.html"><a href="warmup.html"><i class="fa fa-check"></i><b>3</b> Warmup</a><ul>
+<li class="chapter" data-level="3" data-path="warm-up.html"><a href="warm-up.html"><i class="fa fa-check"></i><b>3</b> Warm-up</a><ul>
 <li class="chapter" data-level="3.1" data-path="hint.html"><a href="hint.html"><i class="fa fa-check"></i><b>3.1</b> Hint</a></li>
 <li class="chapter" data-level="3.2" data-path="answers.html"><a href="answers.html"><i class="fa fa-check"></i><b>3.2</b> Answers</a></li>
-<li class="chapter" data-level="3.3" data-path="mathematical-background-1-itheta.html"><a href="mathematical-background-1-itheta.html"><i class="fa fa-check"></i><b>3.3</b> Mathematical Background 1: <span class="math inline">\(I(\theta)\)</span></a></li>
-<li class="chapter" data-level="3.4" data-path="mathematical-background-2-improper-prior.html"><a href="mathematical-background-2-improper-prior.html"><i class="fa fa-check"></i><b>3.4</b> Mathematical Background 2: Improper Prior</a></li>
+<li class="chapter" data-level="3.3" data-path="warmer-up-itheta.html"><a href="warmer-up-itheta.html"><i class="fa fa-check"></i><b>3.3</b> Warmer-up: <span class="math inline">\(I(\theta)\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="the-warmest-up-improper-prior.html"><a href="the-warmest-up-improper-prior.html"><i class="fa fa-check"></i><b>3.4</b> The warmest-up: Improper Prior</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="findings.html"><a href="findings.html"><i class="fa fa-check"></i><b>4</b> Findings</a><ul>
-<li class="chapter" data-level="4.1" data-path="jeffreys-prior.html"><a href="jeffreys-prior.html"><i class="fa fa-check"></i><b>4.1</b> Jeffreys Prior</a></li>
+<li class="chapter" data-level="4" data-path="findings-jeffreys-prior.html"><a href="findings-jeffreys-prior.html"><i class="fa fa-check"></i><b>4</b> Findings: Jeffreys Prior</a><ul>
+<li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
 <li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
+<li class="chapter" data-level="4.3" data-path="following-up-on-bernoulli.html"><a href="following-up-on-bernoulli.html"><i class="fa fa-check"></i><b>4.3</b> Following up on Bernoulli</a></li>
+<li class="chapter" data-level="4.4" data-path="normal.html"><a href="normal.html"><i class="fa fa-check"></i><b>4.4</b> Normal!</a></li>
+<li class="chapter" data-level="4.5" data-path="limitations.html"><a href="limitations.html"><i class="fa fa-check"></i><b>4.5</b> Limitations</a></li>
 </ul></li>
+<li class="chapter" data-level="5" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>5</b> References</a></li>
 </ul>
 
       </nav>
@@ -93,16 +97,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="jeffreys-prior" class="section level2">
-<h2><span class="header-section-number">4.1</span> Jeffreys Prior</h2>
+<div id="the-warmest-up-improper-prior" class="section level2">
+<h2><span class="header-section-number">3.4</span> The warmest-up: Improper Prior</h2>
+<p>Let <span class="math inline">\(\pi(\theta)\)</span> denote a prior distribution. If <span class="math inline">\(\int \pi(\theta) \; d\theta = \infty\)</span>, <span class="math inline">\(\pi(\theta)\)</span> is not a valid probability density, since the prior distribution does not have a finite integral.</p>
+<p> </p>
+<p>An example of improper prior is an uninformative location prior: (Jordan 2010)</p>
+<p>Consider a probability distribution of density <span class="math inline">\(f(X - \theta)\)</span> where <span class="math inline">\(\theta\)</span> is a location parameter that we endow with a prior. A candidate for the prior would be <span class="math inline">\(\pi(\theta) \propto 1\)</span>. If <span class="math inline">\(\theta\)</span> can take any value in <span class="math inline">\(\mathbb{R}\)</span>, the flat prior is not a probability density since it does not integrate to <span class="math inline">\(1\)</span>.</p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="findings.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="invariance-to-parametrization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="warmer-up-itheta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="findings-jeffreys-prior.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
