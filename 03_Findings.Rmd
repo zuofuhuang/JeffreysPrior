@@ -22,8 +22,12 @@ $\pi_J(\theta)$ denotes the Jeffreys Prior of $\theta$;
 
 ## Normal!
 
-
-
+For a univariate Normal distribution $X \sim N(\theta,\sigma^2)$,
+$$\begin{align} f_X(x) & = \frac{1}{\sqrt{2\pi I}}·e^{-\frac{(x-\theta)^2}{2I}}
+\\ Log f(X;\theta) & = -\frac{1}{2} Log(2\pi \sigma^2) - \frac{(x-\theta)^2}{2\sigma^2} \\
+\frac{\partial}{\partial \theta} Log f(X;\theta) & = [-\frac{x^2-2x\theta + \theta^2}{2\sigma^2}]’ = \frac{x}{\sigma^2} - \frac{\theta}{\sigma^2} \\ 
+\frac{\partial^2}{\partial \theta^2} Log f(X;\theta) & = -\frac{1}{\sigma^2} \\
+I(\theta) & = -E(-\frac{1}{\sigma^2}) = \frac{1}{\sigma^2} \rightarrow \pi_J = (\sigma^2)^{-\frac{1}{2}} = \frac{1}{\sigma} \end{align}$$
 
 ## Limitations
 

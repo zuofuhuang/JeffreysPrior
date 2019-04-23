@@ -4,7 +4,7 @@ author: 'Emma Heth and Zuofu Huang, Spring 2019 Macalester College'
 site: bookdown::bookdown_site
 output: 
   bookdown::gitbook:
-    split_by: chapter
+    split_by: section
     config:
       toc:
         collapse: section
