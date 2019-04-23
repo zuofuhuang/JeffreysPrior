@@ -2,7 +2,7 @@ book_filename: "JeffreysPrior"
 language:
   ui:
     chapter_name: "Chapter "
-rmd_files: ['index.Rmd','01_introduction.Rmd','02_Preliminaries.Rmd','03_Findings.Rmd']
+rmd_files: ['index.Rmd','01_Introduction.Rmd','02_Warmup.Rmd','03_Findings.Rmd']
 delete_merged_file: true
 output_dir: "docs"
 

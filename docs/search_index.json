@@ -1,6 +1,12 @@
 [
-["index.html", "MATH 455 Mathematical Statistics - Jeffreys Prior Chapter 1 Preface", " MATH 455 Mathematical Statistics - Jeffreys Prior Emma Heth and Zuofu Huang, Spring 2019 Macalester College Chapter 1 Preface Hello! Welcome to the bookdown of our MATH 455 Mathematical Statistics project! Hope this is a good abstract of Jeffreys Prior for you. We are enjoying knowing more about and communicating Jeffreys Prior. You are always welcome to come back to check our progress! Here’s a comic in recognition of Mathematical Statistics (especially null hypothesis). "],
-["introduction.html", "Chapter 2 Introduction 2.1 ", " Chapter 2 Introduction 2.1 "],
-["preliminaries.html", "Chapter 3 Preliminaries 3.1 Why Jeffreys Prior?", " Chapter 3 Preliminaries 3.1 Why Jeffreys Prior? "],
-["findings.html", "Chapter 4 Findings 4.1 ", " Chapter 4 Findings 4.1 "]
+["index.html", "MATH 455 Mathematical Statistics - Jeffreys Prior Chapter 1 Preface", " MATH 455 Mathematical Statistics - Jeffreys Prior Emma Heth and Zuofu Huang, Spring 2019 Macalester College Chapter 1 Preface Hello! Welcome to the bookdown of our MATH 455 Mathematical Statistics project! Hope this is a good abstract of Jeffreys Prior for you. We are enjoying knowing more about and communicating Jeffreys Prior. You are always welcome to come back to check our progress! Here’s a comic in recognition of Mathematical Statistics (especially null hypothesis). Credit to https://xkcd.com/892/ "],
+["introduction.html", "Chapter 2 Introduction ", " Chapter 2 Introduction "],
+["wait-jeffreys.html", "2.1 Wait, Jeffreys?", " 2.1 Wait, Jeffreys? "],
+["why-jeffreys.html", "2.2 Why Jeffreys?", " 2.2 Why Jeffreys? "],
+["whats-jeffreys.html", "2.3 What’s Jeffreys?", " 2.3 What’s Jeffreys? "],
+["warmup.html", "Chapter 3 Warmup ", " Chapter 3 Warmup "],
+["exercises.html", "3.1 Exercises", " 3.1 Exercises "],
+["peek.html", "3.2 Peek", " 3.2 Peek "],
+["findings.html", "Chapter 4 Findings ", " Chapter 4 Findings "],
+["section.html", "4.1 ", " 4.1 "]
 ]
