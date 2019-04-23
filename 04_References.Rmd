@@ -1,0 +1,39 @@
+# References
+
+1. Berger, J. (1985). Statistical Decision Theory and Bayesian Analysis, 2nd ed. Springer, New York.
+
+2. Gelman, Andrew, et al. (2013). Bayesian data analysis. Chapman and Hall/CRC.
+
+3. Good, I. (1980). The contributions of Jeffreys to Bayesian statistics. In Bayesian Analysis in Econometrics and Statistics: Essays in Honor of Harold Jeffreys 21–34. North-Holland, Amsterdam.
+
+4. Jeffreys, H. (1939). Theory of Probability, 1st ed. The Clarendon Press, Oxford.
+
+5. Jeffreys, H. (1948). Theory of Probability, 2nd ed. The Clarendon Press, Oxford.
+
+6. Jeffreys, H. (1961). Theory of Probability, 3rd ed. Oxford Classic Texts in the Physical Sciences. Oxford University Press, Oxford.
+
+7. Jordan, M. (2010). Lecture 6: Jeffreys priors [Lecture notes]. Retrieved from https://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture6.pdf
+
+8. Jordan, M. (2010). Lecture 7: Jeffreys priors and reference priors [Lecture notes]. Retrieved fromhttps://people.eecs.berkeley.edu/~jordan/courses/260-spring10/lectures/lecture7.pdf
+
+9. Kass, R. & Wasserman, L. (1996). Formal rules of selecting prior distributions: A review and annotated bibliography. Journal of the American Statistical Association 91, 343–1370
+
+10. Lindley, D. (1980). Jeffreys’s contribution to modern statistical thought. In Bayesian Analysis in Econometrics and Statistics: Essays in Honor of Harold Jeffreys 35–39. North-Holland, Amsterdam.
+
+11. Liu, Han & Wasserman, Larry. (2014) Statistical Machine Learning, 310-312.  Unpublished Manuscript, CMU. Retrieved from http://www.stat.cmu.edu/~larry/=sml/Bayes.pdf
+
+12. Rao, S. S. A review of results in Statistical Inference. [Lecture notes] Retrieved from http://www.stat.tamu.edu/~suhasini/teaching613/inference.pdf
+
+13. Robert, C. P., Chopin, N., & Rousseau, J. (2009). Harold Jeffreys’s Theory of Probability Revisited. Statistical Science 24(2), 141-172.
+
+14. Tokdar, S. T. (2011). The Jeffreys Prior. [Lecture notes] Retrieved from https://www2.stat.duke.edu/courses/Fall11/sta114/jeffreys.pdf
+
+15. Yang, R. & Berger, J. (1998). A catalog of noninformative priors. Durham, NC: Institute of Statistics and Decision Sciences. Retrieved from http://www.stats.org.uk/priors/noninformative/YangBerger1998.pdf
+
+
+
+
+
+
+
+

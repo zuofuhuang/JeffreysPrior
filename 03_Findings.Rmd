@@ -1,2 +1,39 @@
-# Findings
+# Findings: Jeffreys Prior
+
+Let $\theta$ be a parameter of a distribution that model a random variable $X$:
+
+$\pi(\theta)$ denotes the prior of $\theta$;
+
+$\pi_J(\theta)$ denotes the Jeffreys Prior of $\theta$;
+
+## Definition and attributes
+
+
+
+## Invariance to parametrization
+
+
+
+
+## Following up on Bernoulli
+
+
+
+
+## Normal!
+
+
+
+
+## Limitations
+
+
+
+
+
+
+
+
+
+
 

@@ -1,12 +1,44 @@
 # Introduction
 
-```{r}
-hist(rnorm(1000))
-```
+In Bayesian statistics, noninformative priors have become common. Subjective priors are sometimes viewed as compromising the “objectivity” of Statistics (Yang and Berger, 1998). In other cases, there is not enough prior knowledge to establish a subjective prior or a study may not have the resources to assemble and interpret prior knowledge. In any case, establishing effective and accurate noninformative priors is crucial to reporting useful and representative posteriors. 
+
+Historically, statisticians like Bayes and Laplace applied a flat, or uniform, prior (Jordan 2010). While a uniform prior seems the most obvious choice for a noninformative prior, the posterior distribution will vary depending on how the random variable is parametrized. A noninformative prior should not be affected by how the variable is expressed. **(We will talk through a few examples!)** Additionally, flat priors can give much information on a large scale, which we will talk later!
+
+## Wait, Jeffreys?
+
+Sir Harold Jeffreys sought a solution to this problem. He developed a prior invariant to choice of parametrization. In practice, what is most important is not the Jeffreys prior but the “Jeffreys” posterior generated from combining the prior with the likelihood. With a Jeffreys posterior of one variable, a change-of-variables will yield the Jeffreys posterior of the new variable. This way, the Jeffreys prior gives a posterior that best represents the data, no matter how it is expressed. In scientific communication, this means different information about the same data can be expressed through change-of-variables rather than by starting over and finding a new posterior.
+
+&nbsp;
+ 
+Non-informative priors are appealing because they are flat priors in a meaningful parametrization, which allow us to conduct Bayesian inference without much influence from prior knowledge.
+
+A classic prior distribution commonly mistaken as non-informative is $Beta(1,1)$. Beta distributions are widely used to measure the probability of a certain event $X$ on a scale of $(0,1)$, whereas $Beta(1,1)$ indicates that the probability is equally distributed. The flat prior distribution is $\pi(\theta) = 1$. Since $\theta$ lies between $0$ and $1$, we can reparametrize $\theta$ using the log-odds ratio: $\rho = log\frac{\theta}{1-\theta}$. Under this change of variables, the prior distribution $\pi(\rho)$ shows transformation variance. This highlights the importance of finding a prior that delivers a principle of invariance. (Jordan 2010) 
 
 
-## Section 1
+## What do we do?
 
-## Section 2
+Here, we explore the development, proof, and limitations of Jeffreys priors.
 
-## Section 3
+We will cover:
+
+**Theoretical Background**
+
+1. Notation of Jeffreys Prior
+
+2. Improper Prior
+
+3. Fisher Information
+
+&nbsp;
+
+**Jeffreys Prior** and, hopefully, some nice graphs!
+
+1. Some attributes of Jeffreys Prior
+
+2. Invariance to parametrization
+
+3. Binomial example $X \sim Bin(n,p)$ and its Jeffreys Prior $Beta \sim \left(\frac{1}{2},\frac{1}{2} \right)$
+
+4. Normal example $X \sim N(\mu,\sigma^2)$ and its Jeffreys Prior
+
+5. Limitations of Jeffreys priors 
