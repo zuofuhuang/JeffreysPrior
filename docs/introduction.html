@@ -64,15 +64,17 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
 <li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
 <li class="chapter" data-level="2.1" data-path="wait-jeffreys.html"><a href="wait-jeffreys.html"><i class="fa fa-check"></i><b>2.1</b> Wait, Jeffreys?</a></li>
-<li class="chapter" data-level="2.2" data-path="why-jeffreys.html"><a href="why-jeffreys.html"><i class="fa fa-check"></i><b>2.2</b> Why Jeffreys?</a></li>
-<li class="chapter" data-level="2.3" data-path="whats-jeffreys.html"><a href="whats-jeffreys.html"><i class="fa fa-check"></i><b>2.3</b> What’s Jeffreys?</a></li>
+<li class="chapter" data-level="2.2" data-path="what-do-we-do.html"><a href="what-do-we-do.html"><i class="fa fa-check"></i><b>2.2</b> What do we do?</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="warmup.html"><a href="warmup.html"><i class="fa fa-check"></i><b>3</b> Warmup</a><ul>
-<li class="chapter" data-level="3.1" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>3.1</b> Exercises</a></li>
-<li class="chapter" data-level="3.2" data-path="peek.html"><a href="peek.html"><i class="fa fa-check"></i><b>3.2</b> Peek</a></li>
+<li class="chapter" data-level="3" data-path="warm-up.html"><a href="warm-up.html"><i class="fa fa-check"></i><b>3</b> Warm-up</a><ul>
+<li class="chapter" data-level="3.1" data-path="hint.html"><a href="hint.html"><i class="fa fa-check"></i><b>3.1</b> Hint</a></li>
+<li class="chapter" data-level="3.2" data-path="answers.html"><a href="answers.html"><i class="fa fa-check"></i><b>3.2</b> Answers</a></li>
+<li class="chapter" data-level="3.3" data-path="mathematical-background-1-itheta.html"><a href="mathematical-background-1-itheta.html"><i class="fa fa-check"></i><b>3.3</b> Mathematical Background 1: <span class="math inline">\(I(\theta)\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="mathematical-background-2-improper-prior.html"><a href="mathematical-background-2-improper-prior.html"><i class="fa fa-check"></i><b>3.4</b> Mathematical Background 2: Improper Prior</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="findings.html"><a href="findings.html"><i class="fa fa-check"></i><b>4</b> Findings</a><ul>
-<li class="chapter" data-level="4.1" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>4.1</b> </a></li>
+<li class="chapter" data-level="4" data-path="findings-jeffreys-prior.html"><a href="findings-jeffreys-prior.html"><i class="fa fa-check"></i><b>4</b> Findings: Jeffreys Prior</a><ul>
+<li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
+<li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
 </ul></li>
 </ul>
 
@@ -92,7 +94,9 @@
 
             <section class="normal" id="section-">
 <div id="introduction" class="section level1">
-<h1><span class="header-section-number">Chapter 2</span> Introduction</h1> 
+<h1><span class="header-section-number">Chapter 2</span> Introduction</h1>
+<p>In Bayesian statistics, noninformative priors have become common. Subjective priors are sometimes viewed as compromising the “objectivity” of Statistics (Yang and Berger, 1998). In other cases, there is not enough prior knowledge to establish a subjective prior or a study may not have the resources to assemble and interpret prior knowledge. In any case, establishing effective and accurate noninformative priors is crucial to reporting useful and representative posteriors.</p>
+<p>Historically, statisticians like Bayes and Laplace applied a flat, or uniform, prior (Jordan 2010). While a uniform prior seems the most obvious choice for a noninformative prior, the posterior distribution will vary depending on how the random variable is parametrized. A noninformative prior should not be affected by how the variable is expressed. <strong>(We will talk through a few examples!)</strong> Additionally, flat priors can give much information on a large scale, which we will talk later!</p> 
 </div>
             </section>
 
@@ -146,6 +150,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

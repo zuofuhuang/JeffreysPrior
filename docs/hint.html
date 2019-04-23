@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.1  | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
-  <meta name="description" content="4.1  | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <title>3.1 Hint | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
+  <meta name="description" content="3.1 Hint | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.1  | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta property="og:title" content="3.1 Hint | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="zuofuhuang/JeffreysPrior" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.1  | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta name="twitter:title" content="3.1 Hint | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="findings.html">
-
+<link rel="prev" href="warm-up.html">
+<link rel="next" href="answers.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -64,15 +64,17 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
 <li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
 <li class="chapter" data-level="2.1" data-path="wait-jeffreys.html"><a href="wait-jeffreys.html"><i class="fa fa-check"></i><b>2.1</b> Wait, Jeffreys?</a></li>
-<li class="chapter" data-level="2.2" data-path="why-jeffreys.html"><a href="why-jeffreys.html"><i class="fa fa-check"></i><b>2.2</b> Why Jeffreys?</a></li>
-<li class="chapter" data-level="2.3" data-path="whats-jeffreys.html"><a href="whats-jeffreys.html"><i class="fa fa-check"></i><b>2.3</b> What’s Jeffreys?</a></li>
+<li class="chapter" data-level="2.2" data-path="what-do-we-do.html"><a href="what-do-we-do.html"><i class="fa fa-check"></i><b>2.2</b> What do we do?</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="warmup.html"><a href="warmup.html"><i class="fa fa-check"></i><b>3</b> Warmup</a><ul>
-<li class="chapter" data-level="3.1" data-path="exercises.html"><a href="exercises.html"><i class="fa fa-check"></i><b>3.1</b> Exercises</a></li>
-<li class="chapter" data-level="3.2" data-path="peek.html"><a href="peek.html"><i class="fa fa-check"></i><b>3.2</b> Peek</a></li>
+<li class="chapter" data-level="3" data-path="warm-up.html"><a href="warm-up.html"><i class="fa fa-check"></i><b>3</b> Warm-up</a><ul>
+<li class="chapter" data-level="3.1" data-path="hint.html"><a href="hint.html"><i class="fa fa-check"></i><b>3.1</b> Hint</a></li>
+<li class="chapter" data-level="3.2" data-path="answers.html"><a href="answers.html"><i class="fa fa-check"></i><b>3.2</b> Answers</a></li>
+<li class="chapter" data-level="3.3" data-path="mathematical-background-1-itheta.html"><a href="mathematical-background-1-itheta.html"><i class="fa fa-check"></i><b>3.3</b> Mathematical Background 1: <span class="math inline">\(I(\theta)\)</span></a></li>
+<li class="chapter" data-level="3.4" data-path="mathematical-background-2-improper-prior.html"><a href="mathematical-background-2-improper-prior.html"><i class="fa fa-check"></i><b>3.4</b> Mathematical Background 2: Improper Prior</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="findings.html"><a href="findings.html"><i class="fa fa-check"></i><b>4</b> Findings</a><ul>
-<li class="chapter" data-level="4.1" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>4.1</b> </a></li>
+<li class="chapter" data-level="4" data-path="findings-jeffreys-prior.html"><a href="findings-jeffreys-prior.html"><i class="fa fa-check"></i><b>4</b> Findings: Jeffreys Prior</a><ul>
+<li class="chapter" data-level="4.1" data-path="definition-and-attributes.html"><a href="definition-and-attributes.html"><i class="fa fa-check"></i><b>4.1</b> Definition and attributes</a></li>
+<li class="chapter" data-level="4.2" data-path="invariance-to-parametrization.html"><a href="invariance-to-parametrization.html"><i class="fa fa-check"></i><b>4.2</b> Invariance to parametrization</a></li>
 </ul></li>
 </ul>
 
@@ -91,18 +93,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="section" class="section level2">
-<h2><span class="header-section-number">4.1</span> </h2>
-
+<div id="hint" class="section level2">
+<h2><span class="header-section-number">3.1</span> Hint</h2>
+<p><span class="math display">\[\begin{align} Log(a^2·b^3) &amp; = Log(a^2) + Log(b^3) \\ &amp; = 
+2Log(a) + 3Log(b)
+\end{align}\]</span></p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><span class="math display">\[E(X) = \theta\]</span></p>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="findings.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="warm-up.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="answers.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -148,6 +156,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

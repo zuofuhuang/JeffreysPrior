@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.1 Wait, Jeffreys? | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
-  <meta name="description" content="2.1 Wait, Jeffreys? | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <title>3.3 Mathematical Background 1: \(I(\theta)\) | MATH 455 Mathematical Statistics - Jeffreys Prior</title>
+  <meta name="description" content="3.3 Mathematical Background 1: \(I(\theta)\) | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta name="generator" content="bookdown  and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.1 Wait, Jeffreys? | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta property="og:title" content="3.3 Mathematical Background 1: \(I(\theta)\) | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="zuofuhuang/JeffreysPrior" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.1 Wait, Jeffreys? | MATH 455 Mathematical Statistics - Jeffreys Prior" />
+  <meta name="twitter:title" content="3.3 Mathematical Background 1: \(I(\theta)\) | MATH 455 Mathematical Statistics - Jeffreys Prior" />
   
   
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html">
-<link rel="next" href="what-do-we-do.html">
+<link rel="prev" href="answers.html">
+<link rel="next" href="mathematical-background-2-improper-prior.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -93,20 +93,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="wait-jeffreys" class="section level2">
-<h2><span class="header-section-number">2.1</span> Wait, Jeffreys?</h2>
-<p>Sir Harold Jeffreys sought a solution to this problem. He developed a prior invariant to choice of parametrization. In practice, what is most important is not the Jeffreys prior but the “Jeffreys” posterior generated from combining the prior with the likelihood. With a Jeffreys posterior of one variable, a change-of-variables will yield the Jeffreys posterior of the new variable. This way, the Jeffreys prior gives a posterior that best represents the data, no matter how it is expressed. In scientific communication, this means different information about the same data can be expressed through change-of-variables rather than by starting over and finding a new posterior.</p>
-<p> </p>
-<p>Non-informative priors are appealing because they are flat priors in a meaningful parametrization, which allow us to conduct Bayesian inference without much influence from prior knowledge.</p>
-<p>A classic prior distribution commonly mistaken as non-informative is <span class="math inline">\(Beta(1,1)\)</span>. Beta distributions are widely used to measure the probability of a certain event <span class="math inline">\(X\)</span> on a scale of <span class="math inline">\((0,1)\)</span>, whereas <span class="math inline">\(Beta(1,1)\)</span> indicates that the probability is equally distributed. The flat prior distribution is <span class="math inline">\(\pi(\theta) = 1\)</span>. Since <span class="math inline">\(\theta\)</span> lies between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>, we can reparametrize <span class="math inline">\(\theta\)</span> using the log-odds ratio: <span class="math inline">\(\rho = log\frac{\theta}{1-\theta}\)</span>. Under this change of variables, the prior distribution <span class="math inline">\(\pi(\rho)\)</span> shows transformation variance. This highlights the importance of finding a prior that delivers a principle of invariance. (Jordan 2010)</p>
+<div id="mathematical-background-1-itheta" class="section level2">
+<h2><span class="header-section-number">3.3</span> Mathematical Background 1: <span class="math inline">\(I(\theta)\)</span></h2>
+<p>In Statistics, Fisher Information measures the amount of information that an observable random variable X carries about an unknown parameter <span class="math inline">\(\theta\)</span> of a distribution that models <span class="math inline">\(X\)</span>.</p>
+<p>Let <span class="math inline">\(f(X; \theta)\)</span> denote the probability density function (pdf) or probability mass function (pmf) of <span class="math inline">\(X\)</span> conditional on the value of <span class="math inline">\(\theta\)</span>. The distribution of <span class="math inline">\(f(X; \theta)\)</span> indicates the amount of information data <span class="math inline">\(X\)</span> provides on parameter <span class="math inline">\(\theta\)</span>.</p>
+<p>Formally, the partial derivative with respect to <span class="math inline">\(\theta\)</span> of the natural logarithm of <span class="math inline">\(f(X;\theta)\)</span> is defined as the <strong>score</strong>. If <span class="math inline">\(\theta_0\)</span> is the true parameter, the score is <span class="math inline">\(0\)</span>.</p>
+<p><span class="math display">\[\begin{align} E\left[\frac{\partial}{\partial \theta} log f(X;\theta)|\theta = \theta_0 \right] &amp; = \int \frac{\frac{\partial}{\partial \theta} f(x;\theta)|\theta=\theta_0}{f(x;\theta_0)} f(x;\theta_0) dx \\ &amp; = \frac{\partial}{\partial \theta} \int f(x;\theta)dx \\ &amp; = \frac{\partial}{\partial \theta} 1 = 0 \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;   (1) \end{align}\]</span></p>
+<p>Since the expected value of the score function is <span class="math inline">\(0\)</span>, the variance of the score function is defined as the Fisher Information:</p>
+<p><span class="math display">\[I(\theta) = E\left[ \left(\frac{\partial}{\partial \theta} log f(X;\theta)\right)^2 | \theta\right] = \int \left( \frac{\partial}{\partial \theta} log f(x;\theta)\right)^2 f(x;\theta)dx\]</span></p>
+<p>If <span class="math inline">\(log(f(X;\theta)\)</span> is twice differentiable, under certain regularity conditions, we can also write the Fisher Information as:</p>
+<p><span class="math display">\[I(\theta) = -E\left[ \frac{\partial^2}{\partial \theta^2} log f(X;\theta)| \theta\right]\]</span></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-do-we-do.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="answers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="mathematical-background-2-improper-prior.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
