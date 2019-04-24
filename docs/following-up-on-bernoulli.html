@@ -138,11 +138,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="following-up-on-bernoulli" class="section level2">
 <h2><span class="header-section-number">4.3</span> Following up on Bernoulli</h2>
-<p>Suppose X is binomially distributed:</p>
+<p>Suppose <span class="math inline">\(X\)</span> is binomially distributed:</p>
 <p><span class="math display">\[X\sim Bin(n,\theta) \\ f(x|\theta) = {n\choose x} \theta^x (1-\theta)^{n-x}\]</span></p>
-<p>From the warmup, given that E(X)=p, we know that</p>
+<p>From the warmup, given that <span class="math inline">\(E(X)=p\)</span>, we know that</p>
 <p><span class="math display">\[I(\theta) = -E_{\theta} \left[ \frac{d^2 log f(x|\theta)}{d\theta^2}\right] \\ =\frac{1}{\theta (1-\theta)}\]</span></p>
-<p>Then <span class="math inline">\(\pi_J(\theta) = I(\theta)^{\frac{1}{2}} \propto \theta^{\frac{1}{2}}(1-\theta)^{\frac{1}{2}}\)</span>, so the Jeffreys prior has the distribution of a Beta<span class="math inline">\(\left(\frac{1}{2},\frac{1}{2}\right)\)</span> density. Below, we can see the distributions of a Beta(½, ½) and a Beta(1, 1), or flat prior.</p>
+<p>Then <span class="math inline">\(\pi_J(\theta) = I(\theta)^{\frac{1}{2}} \propto \theta^{\frac{1}{2}}(1-\theta)^{\frac{1}{2}}\)</span>, so the Jeffreys prior has the distribution of a <span class="math inline">\(Beta\left(\frac{1}{2},\frac{1}{2}\right)\)</span> density. Below, we can see the distributions of a <span class="math inline">\(Beta\left(\frac{1}{2},\frac{1}{2}\right)\)</span> and a <span class="math inline">\(Beta(1, 1)\)</span>, or flat prior.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(reshape2)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">x &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dt">length=</span><span class="dv">200</span>)
