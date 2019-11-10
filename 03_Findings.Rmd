@@ -61,15 +61,15 @@ $Q.E.D.$
 
 ## Following up on Bernoulli
 
-Suppose X is binomially distributed:
+Suppose $X$ is binomially distributed:
 
 $$X\sim Bin(n,\theta) \\ f(x|\theta) = {n\choose x} \theta^x (1-\theta)^{n-x}$$
 
-From the warmup, given that E(X)=p, we know that
+From the warmup, given that $E(X)=p$, we know that
 
-$$I(\theta) = -E_{\theta} \left[ \frac{d^2 log f(x|\theta)}{d\theta^2}\right] \\ =\frac{1}{\theta (1-\theta)}$$
+$$\begin{aligned} I(\theta) & = -E_{\theta} \left[ \frac{d^2 log f(x|\theta)}{d\theta^2}\right] \\ & = \frac{1}{\theta (1-\theta)} \end{aligned}$$
 
-Then $\pi_J(\theta) = I(\theta)^{\frac{1}{2}} \propto \theta^{\frac{1}{2}}(1-\theta)^{\frac{1}{2}}$, so the Jeffreys prior has the distribution of a Beta$\left(\frac{1}{2},\frac{1}{2}\right)$ density. Below, we can see the distributions of a Beta(½, ½) and a Beta(1, 1), or flat prior.
+Then $\pi_J(\theta) = I(\theta)^{\frac{1}{2}} \propto \theta^{\frac{1}{2}}(1-\theta)^{\frac{1}{2}}$, so the Jeffreys prior has the distribution of a $Beta\left(\frac{1}{2},\frac{1}{2}\right)$ density. Below, we can see the distributions of a $Beta\left(\frac{1}{2},\frac{1}{2}\right)$ and a $Beta(1, 1)$, or flat prior.
 
 ```{r}
 library(ggplot2)

@@ -17,11 +17,11 @@ github-repo: zuofuhuang/JeffreysPrior
 
 Hello! Welcome to the bookdown of our MATH 455 Mathematical Statistics project! Hope this is a good abstract of Jeffreys Prior for you.
 
-We **are enjoying** knowing more about and communicating Jeffreys Prior. You are always welcome to come back to check our progress!
+We enjoyed knowing more about and communicating Jeffreys Prior. Please reach out to us if you have any questions!
 
 &nbsp;
 
-Here's a comic in recognition of Mathematical Statistics (especially null hypothesis).
+Here's a comic in recognition of Mathematical Statistics (null hypothesis).
 
 ![](StartComic.png)
 
